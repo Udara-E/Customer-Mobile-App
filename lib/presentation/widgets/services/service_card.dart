@@ -4,7 +4,7 @@ import '../../../core/responsive/extensions.dart';
 // import '../../../core/responsive/app_sizes.dart';
 import '../../../core/responsive/typography.dart';
 import '../../../core/theme/colors.dart';
-import '../../../data//models/service_model.dart';
+import '../../../data/models/service_model.dart';
 
 class ServiceCard extends StatelessWidget {
   final ServiceItem service;

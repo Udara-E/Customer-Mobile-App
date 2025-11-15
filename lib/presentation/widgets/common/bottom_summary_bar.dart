@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/responsive/extensions.dart';
 import '../../../core/responsive/app_sizes.dart';
-// import '../../../core/responsive/typography.dart';
 import '../../../core/theme/colors.dart';
 
 class BottomSummaryBar extends StatelessWidget {

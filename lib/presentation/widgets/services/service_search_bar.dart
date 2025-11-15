@@ -1,7 +1,6 @@
 // lib/presentation/widgets/services/service_search_bar.dart
 import 'package:flutter/material.dart';
 import '../../../core/responsive/extensions.dart';
-// import '../../../core/theme/colors.dart';
 
 class ServiceSearchBar extends StatelessWidget {
   final TextEditingController controller;
