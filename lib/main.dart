@@ -1,4 +1,5 @@
-import 'package:customer_mobile_app/presentation/screens/profile/profile_screen.dart';
+import 'package:customer_mobile_app/presentation/screens/booking/add_members/add_members_screen.dart';
+// import 'package:customer_mobile_app/presentation/screens/profile/profile_screen.dart';
 // import 'package:customer_mobile_app/presentation/screens/services/services_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const ProfileScreen(),
+      home: const AddMembersScreen(),
     );
   }
 }
