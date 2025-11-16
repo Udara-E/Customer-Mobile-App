@@ -1,107 +1,59 @@
+// lib/presentation/widgets/booking/professionals/professional_card.dart
 import 'package:flutter/material.dart';
 
 class ProfessionalCard extends StatelessWidget {
-  final Map<String, dynamic> professional;
-  final bool isSelected;
-  final ValueChanged<String> onSelect;
+  final String name;
+  final String role;
+  final IconData icon;
 
   const ProfessionalCard({
     Key? key,
-    required this.professional,
-    required this.isSelected,
-    required this.onSelect,
+    this.name = 'Sophia Bennett',
+    this.role = 'Hair Stylist',
+    this.icon = Icons.person_outline,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final String profName = professional['name'] ?? '';
-    final String profRole = professional['role'] ?? '';
-    final double profRating = professional['rating'] ?? 0.0;
-    final String profAvailability = professional['availability'] ?? '';
-
     return Container(
-      margin: const EdgeInsets.only(bottom: 16),
-      padding: const EdgeInsets.all(16),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Colors.grey[50],
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFE0E0E0), width: 1),
       ),
       child: Row(
         children: [
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  profRole,
-                  style: const TextStyle(
-                    fontSize: 12,
-                    color: Color(0xFF757575),
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  profName,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black,
-                  ),
-                ),
-                const SizedBox(height: 6),
-                Row(
-                  children: [
-                    const Icon(Icons.star, size: 14, color: Color(0xFFFFC107)),
-                    const SizedBox(width: 4),
-                    Text(
-                      '$profRating · $profAvailability',
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: Color(0xFF757575),
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                ElevatedButton(
-                  onPressed: () => onSelect(profName),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: isSelected
-                        ? const Color(0xFF1976D2)
-                        : const Color(0xFFE3F2FD),
-                    foregroundColor: isSelected
-                        ? Colors.white
-                        : const Color(0xFF1976D2),
-                    elevation: 0,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 24,
-                      vertical: 8,
-                    ),
-                    minimumSize: const Size(0, 32),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                  ),
-                  child: const Text(
-                    'Select',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-                  ),
-                ),
-              ],
+          Container(
+            width: 48,
+            height: 48,
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              shape: BoxShape.circle,
             ),
+            child: Icon(icon, color: Colors.grey[600], size: 28),
           ),
-          const SizedBox(width: 16),
-          SizedBox(
-            width: 98,
-            height: 119,
-            child: Image.asset(
-              'assets/icons/image_icon.png',
-              width: 98,
-              height: 119,
-            ),
+          const SizedBox(width: 12),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                name,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 2),
+              Text(
+                role,
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
           ),
         ],
       ),

@@ -95,16 +95,7 @@ class AppointmentSummaryScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  ProfessionalCard(
-                    professional: const {
-                      'name': 'John Doe',
-                      'role': 'Hair Stylist',
-                      'rating': 4.5,
-                      'availability': 'Available',
-                    },
-                    isSelected: true,
-                    onSelect: (String) {},
-                  ),
+                  ProfessionalCard(),
                   const SizedBox(height: 24),
                   const Text(
                     'Appointment Date & Time',
