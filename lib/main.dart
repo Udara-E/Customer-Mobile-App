@@ -1,4 +1,5 @@
-import 'package:customer_mobile_app/presentation/screens/services/services_screen.dart';
+import 'package:customer_mobile_app/presentation/screens/profile/profile_screen.dart';
+// import 'package:customer_mobile_app/presentation/screens/services/services_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const ServicesScreen(),
+      home: const ProfileScreen(),
     );
   }
 }
