@@ -89,12 +89,7 @@ class _ProfessionalsScreenState extends State<ProfessionalsScreen> {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               itemCount: _professionalsData.length,
               itemBuilder: (context, index) {
-                return ProfessionalCard(
-                  professional: _professionalsData[index],
-                  isSelected:
-                      _selectedProfName == _professionalsData[index]['name'],
-                  onSelect: (name) => setState(() => _selectedProfName = name),
-                );
+                return ProfessionalCard();
               },
             ),
           ),
