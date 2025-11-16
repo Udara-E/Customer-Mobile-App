@@ -1,6 +1,5 @@
 import 'package:customer_mobile_app/core/responsive/extensions.dart';
 import 'package:customer_mobile_app/core/responsive/size_config.dart';
-import 'package:customer_mobile_app/presentation/screens/booking/services/services_screen.dart';
 import 'package:customer_mobile_app/presentation/widgets/booking/add_members/add_members_avatar.dart';
 import 'package:customer_mobile_app/presentation/widgets/booking/add_members/add_members_form.dart';
 import 'package:customer_mobile_app/presentation/widgets/booking/add_members/bottom_nav_bar.dart';
