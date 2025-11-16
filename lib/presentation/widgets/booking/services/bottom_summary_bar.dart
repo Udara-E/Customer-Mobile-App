@@ -1,7 +1,7 @@
 // lib/presentation/widgets/common/bottom_summary_bar.dart
 import 'package:flutter/material.dart';
-import '../../../core/responsive/extensions.dart';
-import '../../../core/theme/colors.dart';
+import '../../../../core/responsive/extensions.dart';
+import '../../../../core/theme/colors.dart';
 
 class BottomSummaryBar extends StatelessWidget {
   final int selectedCount;
