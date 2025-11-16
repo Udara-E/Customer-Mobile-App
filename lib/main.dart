@@ -1,8 +1,8 @@
 // import 'package:customer_mobile_app/presentation/screens/booking/add_members/add_members_screen.dart';
 // import 'package:customer_mobile_app/presentation/screens/booking/date_time/date_time_screen.dart';
 // import 'package:customer_mobile_app/presentation/screens/booking/professionals/professionals_screen.dart';
+// import 'package:customer_mobile_app/presentation/screens/booking/services/services_screen.dart';
 // import 'package:customer_mobile_app/presentation/screens/profile/profile_screen.dart';
-// import 'package:customer_mobile_app/presentation/screens/services/services_screen.dart';
 import 'package:customer_mobile_app/presentation/screens/appointments/appointment_summary_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,3 +22,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+// AddMembersScreen
+// DateTimeScreen
+// ProfessionalsScreen
+// ServicesScreen
+// ProfileScreen
+// AppointmentSummaryScreen
