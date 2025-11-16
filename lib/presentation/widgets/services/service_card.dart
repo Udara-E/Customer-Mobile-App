@@ -32,14 +32,17 @@ class ServiceCard extends StatelessWidget {
               children: [
                 Text(
                   service.name,
-                  style: AppTypography.h2.copyWith(fontSize: 16.sp),
+                  style: AppTypography.h2.copyWith(
+                    fontSize: 16.sp,
+                    color: AppColors.textSecondary,
+                  ),
                 ),
                 SizedBox(height: 6.h),
                 Text(
                   service.description,
                   style: AppTypography.body.copyWith(
                     fontSize: 13.sp,
-                    color: AppColors.textSecondary,
+                    color: AppColors.serviceCardDescription,
                     height: 1.4,
                   ),
                 ),
@@ -51,9 +54,9 @@ class ServiceCard extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: service.isSelected
                           ? AppColors.primary
-                          : const Color(0xFFE8F1F8),
+                          : AppColors.serviceAddButton,
                       foregroundColor: service.isSelected
-                          ? AppColors.white
+                          ? AppColors.serviceAddButton
                           : AppColors.primary,
                       padding: EdgeInsets.symmetric(
                         horizontal: 24.w,

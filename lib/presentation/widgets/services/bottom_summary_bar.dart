@@ -24,11 +24,17 @@ class BottomSummaryBar extends StatelessWidget {
         bottom: 22.h,
         top: 12.h,
       ),
-      decoration: const BoxDecoration(color: Colors.white),
+      decoration: const BoxDecoration(
+        color: AppColors.buttonLanguageAndWelcome,
+      ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Divider(color: Colors.grey[300], thickness: 0.5, height: 0.5),
+          Divider(
+            color: AppColors.serviceAddButton,
+            thickness: 0.5,
+            height: 0.5,
+          ),
           SizedBox(height: 12.h),
           Wrap(
             alignment: WrapAlignment.center,
@@ -40,7 +46,7 @@ class BottomSummaryBar extends StatelessWidget {
                 width: 172.w,
                 padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
                 decoration: BoxDecoration(
-                  color: Colors.grey[200],
+                  color: AppColors.serviceAddButton,
                   borderRadius: BorderRadius.circular(8.w),
                 ),
                 child: RichText(
@@ -68,18 +74,16 @@ class BottomSummaryBar extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 55.h,
+                height: 35.h,
+                width: 82.w,
                 child: ElevatedButton(
                   onPressed: onNext,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primary,
-                    foregroundColor: AppColors.white,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 20.w,
-                      vertical: 12.h,
-                    ),
+                    backgroundColor: AppColors.buttonSecondary,
+                    foregroundColor: AppColors.buttonLanguageAndWelcome,
+                    padding: EdgeInsets.only(left: 16.w, right: 8.w),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.w),
+                      borderRadius: BorderRadius.circular(16.w),
                     ),
                     elevation: 0,
                   ),
