@@ -68,7 +68,7 @@ class BottomSummaryBar extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 60.h,
+                height: 55.h,
                 child: ElevatedButton(
                   onPressed: onNext,
                   style: ElevatedButton.styleFrom(
