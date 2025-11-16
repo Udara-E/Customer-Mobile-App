@@ -1,7 +1,6 @@
 // lib/presentation/widgets/common/bottom_summary_bar.dart
 import 'package:flutter/material.dart';
 import '../../../core/responsive/extensions.dart';
-import '../../../core/responsive/app_sizes.dart';
 import '../../../core/theme/colors.dart';
 
 class BottomSummaryBar extends StatelessWidget {
@@ -31,8 +30,11 @@ class BottomSummaryBar extends StatelessWidget {
         children: [
           Divider(color: Colors.grey[300], thickness: 0.5, height: 0.5),
           SizedBox(height: 12.h),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 16.w,
+            runSpacing: 12.h,
             children: [
               Container(
                 width: 172.w,
@@ -42,6 +44,7 @@ class BottomSummaryBar extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8.w),
                 ),
                 child: RichText(
+                  textAlign: TextAlign.center,
                   text: TextSpan(
                     style: TextStyle(
                       fontSize: 14.sp,
@@ -50,7 +53,7 @@ class BottomSummaryBar extends StatelessWidget {
                     children: [
                       TextSpan(
                         text: '$selectedCount Services Selected | ',
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                        style: const TextStyle(fontWeight: FontWeight.w500),
                       ),
                       const TextSpan(
                         text: 'Total: ',
@@ -58,15 +61,14 @@ class BottomSummaryBar extends StatelessWidget {
                       ),
                       TextSpan(
                         text: 'LKR ${totalPrice.toStringAsFixed(0)}',
-                        style: TextStyle(fontWeight: FontWeight.w600),
+                        style: const TextStyle(fontWeight: FontWeight.w600),
                       ),
                     ],
                   ),
                 ),
               ),
-              SizedBox(width: 16.w),
               SizedBox(
-                height: AppSizes.buttonHeight,
+                height: 60.h,
                 child: ElevatedButton(
                   onPressed: onNext,
                   style: ElevatedButton.styleFrom(
@@ -82,6 +84,7 @@ class BottomSummaryBar extends StatelessWidget {
                     elevation: 0,
                   ),
                   child: Row(
+                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
                         'Next',
