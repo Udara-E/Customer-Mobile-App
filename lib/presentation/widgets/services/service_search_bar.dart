@@ -1,4 +1,5 @@
 // lib/presentation/widgets/services/service_search_bar.dart
+import 'package:customer_mobile_app/core/theme/colors.dart';
 import 'package:flutter/material.dart';
 import '../../../core/responsive/extensions.dart';
 
@@ -22,12 +23,12 @@ class ServiceSearchBar extends StatelessWidget {
         height: 44.h, // You used 44 before; keep consistent
         padding: EdgeInsets.symmetric(horizontal: 12.w),
         decoration: BoxDecoration(
-          color: const Color(0xFFE8F1F8),
+          color: AppColors.searchBarBackground,
           borderRadius: BorderRadius.circular(12.w),
         ),
         child: Row(
           children: [
-            Icon(Icons.search, size: 22.w, color: Colors.grey[400]),
+            Icon(Icons.search, size: 22.w, color: AppColors.serviceSearchIcon),
 
             SizedBox(width: 10.w),
 
@@ -43,7 +44,7 @@ class ServiceSearchBar extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'Search',
                   hintStyle: TextStyle(
-                    color: const Color.fromRGBO(140, 140, 140, 1),
+                    color: AppColors.serviceSearchIcon,
                     fontSize: 15.sp,
                     fontWeight: FontWeight.w400,
                     height: 1.4,
@@ -57,7 +58,11 @@ class ServiceSearchBar extends StatelessWidget {
             if (controller.text.isNotEmpty)
               GestureDetector(
                 onTap: onClear,
-                child: Icon(Icons.close, size: 20.w, color: Colors.grey[600]),
+                child: Icon(
+                  Icons.close,
+                  size: 20.w,
+                  color: AppColors.serviceSearchIcon,
+                ),
               ),
           ],
         ),
