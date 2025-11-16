@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../core/responsive/size_config.dart';
-import '../../../core/responsive/extensions.dart';
-import '../../../core/responsive/typography.dart';
-import '../../../core/theme/colors.dart';
-import '../../widgets/booking/services/service_card.dart';
-import '../../widgets/booking/services/service_search_bar.dart';
-import '../../widgets/booking/services/bottom_summary_bar.dart';
+import '../../../../core/responsive/size_config.dart';
+import '../../../../core/responsive/extensions.dart';
+import '../../../../core/responsive/typography.dart';
+import '../../../../core/theme/colors.dart';
+import '../../../widgets/booking/services/service_card.dart';
+import '../../../widgets/booking/services/service_search_bar.dart';
+import '../../../widgets/booking/services/bottom_summary_bar.dart';
 import 'package:customer_mobile_app/data/models/service_model.dart';
 
 class ServicesScreen extends StatefulWidget {
